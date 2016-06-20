@@ -1,0 +1,11 @@
+<h1>Todo List</h1>
+<a href="{% url 'create' %}">Create a new Todo</a>
+<ul>
+{% for thing in queryset %}
+    <li>{{ thing.title }}</li>
+    <li> THis is the emergency level: {{ thing.choice }}</li>
+    <li> This is the content: {{ thing.content }}</li> - <a href="{% url 'delete' id=thing.id %}" type="button">Done</a>
+  </br>
+
+{% endfor %}
+</ul>
