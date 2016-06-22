@@ -3,9 +3,13 @@ from django.http import HttpResponse, HttpResponseRedirect
 from . import forms
 from django.views.generic.list import ListView
 from .import models
+import datetime
+from django.utils.timezone import now
+
 
 def index(request):
-    return render(request, 'taskbuster/index.html')
+    today = datetime.date.today()
+    return render(request, 'taskbuster/index.html', {"today":today, "now":now() })
 
 def todo(request):
     present_form = forms.TodoListForm(request.POST or None)

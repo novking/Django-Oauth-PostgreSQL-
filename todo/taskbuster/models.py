@@ -9,7 +9,7 @@ class Todo(models.Model):
     )
     title = models.CharField(max_length=30)
     content = models.TextField()
-    choice = models.SmallIntegerField(max_length=1, choices=level)
+    choice = models.SmallIntegerField( choices=level)
     DueTime = models.DateField(default=date.today) # auto_now_add=True
     def __str__(self):
         return self.title
