@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'taskmanager',
     'taskbuster',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -86,6 +87,7 @@ INSTALLED_APPS += (
     'allauth.socialaccount',
     # Login via Google
     'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.facebook',
 )
 SITE_ID = 1
 ACCOUNT_USERNAME_REQUIRED = False

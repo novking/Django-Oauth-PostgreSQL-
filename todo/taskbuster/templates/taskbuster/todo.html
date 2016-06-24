@@ -1,4 +1,10 @@
+{% extends "taskbuster/base.html" %}
+{% block head_title %}TaskBuster{% endblock %}
+{% block content %}
+<div class="container">
 <form action="" method="POST">{% csrf_token %}
 {{ present_form.as_p }}
 <input type="submit" value="Add">
 </form>
+</div>
+{% endblock %}
